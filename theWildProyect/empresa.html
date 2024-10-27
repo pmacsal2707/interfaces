@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Mayorista - InovaPlast SL</title>
+    <style>
+        /* Diseño para pantallas grandes */
+        @media (min-width: 1024px) {
+            .producto {
+                width: 23%;
+                display: inline-block;
+                margin: 1%;
+            }
+        }
+
+        /* Diseño para tablets */
+        @media (max-width: 1023px) {
+            .producto {
+                width: 48%;
+                display: inline-block;
+                margin: 1%;
+            }
+        }
+
+        /* Diseño para móviles */
+        @media (max-width: 600px) {
+            .producto {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Tienda Mayorista - InovaPlast SL</h1>
         <nav>
             <li><a href="index.html">Home</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="#.html">Emrpesa</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="#.html">Emrpesa</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
         </nav>
     </header>
 
@@ -101,4 +130,5 @@
         <p>Política de privacidad | Términos de servicio</p>
     </footer>
 </body>
+
 </html>

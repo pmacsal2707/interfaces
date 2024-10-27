@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filamentopía - Contacto</title>
+    <style>
+        #contacto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info-contacto,
+        .formulario-contacto,
+        .mapa-ubicacion {
+            width: 80%;
+            margin: 10px;
+        }
+
+        @media (min-width: 768px) {
+            #contacto {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .info-contacto,
+            .formulario-contacto,
+            .mapa-ubicacion {
+                width: 30%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Encabezado -->
@@ -31,7 +60,8 @@
                 <p><strong>Teléfono:</strong> +34 652 54 78 78</p>
                 <p><strong>Email:</strong> filamentopía@filamentopia.com</p>
                 <p><strong>Web:</strong> <a href="https://www.filamentopia.com">www.filamentopia.com</a></p>
-                <p><strong>Dirección:</strong> Calle Blas Infante, Bloque 4, Portal 3, 2º B, Villamartín - 11650/Cádiz/ Andalucía, España</p>
+                <p><strong>Dirección:</strong> Calle Blas Infante, Bloque 4, Portal 3, 2º B, Villamartín - 11650/Cádiz/
+                    Andalucía, España</p>
             </div>
 
             <!-- Formulario de contacto -->
@@ -52,7 +82,8 @@
 
             <!-- Mapa de ubicación -->
             <div class="mapa-ubicacion">
-                <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_LINK_HERE" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_LINK_HERE" width="400"
+                    height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -69,4 +100,5 @@
     </footer>
 
 </body>
+
 </html>
