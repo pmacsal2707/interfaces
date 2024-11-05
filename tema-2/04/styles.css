@@ -1,0 +1,17 @@
+p {
+    color: blue;
+}
+
+.importante {
+    background-color: yellow;
+}
+
+#titulo {
+    color: green;
+    font-size: 32px;
+}
+
+* {
+    margin: 0;
+  padding: 0;
+}
