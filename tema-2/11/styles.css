@@ -1,60 +1,24 @@
-/* CSS Básico para Todos los Bloques */
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #ffa500;
 }
 
-h1 {
-  text-align: center;
+#id1 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
-.vh-box, .vw-box, .percent-box {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  margin: 10px;
-  text-align: center;
-  padding: 20px;
+#id2 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Bloque con vh y vw */
-.vh-box {
-  background-color: #3498db; /* Azul */
-  width: 50vw; /* Completa con 50vw para que ocupe el 50% del ancho del viewport */
-  height: 30vh; /* Completa con 30vh para que ocupe el 30% de la altura del viewport */
+#id3 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
 }
-
-/* Bloque con % */
-.vw-box {
-  background-color: #2ecc71; /* Verde */
-  width: 80%; /* Completa con 80% para que ocupe el 80% del ancho del contenedor */
-  height: 200px; /* Completa con 200px para una altura fija */
-}
-
-/* Bloque con % y max-width */
-.percent-box {
-  background-color: #e74c3c; /* Rojo */
-  width: 60%; /* Completa con 60% para que ocupe el 60% del ancho del contenedor */
-  height: 200px; /* Completa con 200px para una altura fija */
-  max-width: 500px; /* Completa con 500px para limitar el ancho máximo */
-}
-
-/*
-  Preguntas para Reflexionar:
-  ● ¿Cómo afecta cada unidad (vh, vw, %) al diseño cuando se cambia el tamaño de la ventana?
-    - Tanto vh como vw afectan al tamaño de la ventana modificando el alto y el ancho 
-    respectivamente.
-    - % depende del contenedor, no de la ventana.
-
-  ● ¿Qué diferencias observas entre el comportamiento del .vh-box y el .vw-box?
-    - El .vh-box cambia de tamaño en ancho y alto con la ventana. El .vw-box solo ajusta el
-    ancho (porcentaje), mientras que la altura es fija.
-
-  ● ¿Cómo limita el tamaño del bloque .percent-box la propiedad max-width?
-    - max-width limita el ancho del bloque a un valor máximo (500px), incluso si el 
-    porcentaje podría hacerlo más grande.
-*/

@@ -25,38 +25,49 @@ h1 {
 /* 1. Fondo de Color */
 .color-box {
   /* Usa la propiedad background-color para darle un color sólido */
-  background-color: ___; /* Completa con un color hexadecimal o color por nombre */
+  background-color: #ffa500;
+  /* Completa con un color hexadecimal o color por nombre */
 }
 
 /* 2. Imagen de Fondo */
 .image-box {
   /* Usa background-image para agregar una imagen de fondo */
-  background-image: url('https://via.placeholder.com/300');
+  background-image: url('https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg');
   /* Completa con propiedades para ajustar la imagen */
-  background-repeat: ___; /* Completa con no-repeat para que no se repita */
-  background-size: ___; /* Completa con cover o contain para ajustar la imagen */
-  background-position: ___; /* Completa con center para centrar la imagen */
+  background-repeat: no-repeat;
+  /* Completa con no-repeat para que no se repita */
+  background-size: cover;
+  /* Completa con cover o contain para ajustar la imagen */
+  background-position: center;
+  /* Completa con center para centrar la imagen */
 }
 
 /* 3. Fondo con Gradiente */
 .gradient-box {
   /* Usa background-image con un gradiente lineal */
-  background-image: linear-gradient(to right, ___, ___); /* Completa con dos colores */
+  background-image: linear-gradient(to right, orange, black);
+  /* Completa con dos colores */
 }
 
 /* 4. Múltiples Fondos */
 .multiple-box {
   /* Usa background-image para aplicar dos fondos: una imagen y un gradiente */
-  background-image: url('https://via.placeholder.com/150'), linear-gradient(to right, ___, ___); /* Completa con dos colores en el gradiente */
-  background-repeat: ___; /* Completa con no-repeat para la imagen */
-  background-size: ___, ___; /* Completa con cover para la imagen y 100% para el gradiente */
-  background-position: ___, ___; /* Completa con center para la imagen y 0 0 para el gradiente */
+  background-image: url('https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg');
+  /* Completa con dos colores en el gradiente */
+  background-repeat: no-repeat;
+  /* Completa con no-repeat para la imagen */
+  background-size: cover, 100%;
+  /* Completa con cover para la imagen y 100% para el gradiente */
+  background-position: center, 0 0;
+  /* Completa con center para la imagen y 0 0 para el gradiente */
 }
 
 /* 5. Color del Texto y Opacidad */
 .text-box {
   /* Usa color para cambiar el color del texto */
-  color: ___; /* Completa con un color hexadecimal o nombre de color */
+  color: black;
+  /* Completa con un color hexadecimal o nombre de color */
   /* Usa background-color con opacidad usando rgba */
-  background-color: rgba(___, ___, ___, ___); /* Completa con valores de 0 a 255 para R,G,B y un valor entre 0 y 1 para la opacidad */
+  background-color: rgba(112, 123, 123, 0);
+  /* Completa con valores de 0 a 255 para R,G,B y un valor entre 0 y 1 para la opacidad */
 }
