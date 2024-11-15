@@ -1,0 +1,64 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* 1. Estilo para el título principal (h1) */
+h1 {
+  color: #ffa500;
+  /* Cambia el color del título */
+  font-size: 32px;
+  /* Define el tamaño del título en píxeles */
+  text-align: center;
+  /* Centra el título */
+  text-transform: uppercase;
+  /* Aplica mayúsculas al texto del título */
+}
+
+/* 2. Estilo para el subtítulo (h2) */
+h2 {
+  font-size: 24;
+  /* Reduce el tamaño en comparación con el h1 */
+  color: #2c217c;
+  /* Cambia el color del subtítulo */
+  letter-spacing: 2px;
+  /* Ajusta el espaciado entre letras */
+  text-decoration: underline;
+  /* Añade una línea inferior, superior o de otro tipo */
+}
+
+/* 3. Estilo para el párrafo (p) */
+p {
+  font-size: 16px;
+  /* Aplica un tamaño de fuente cómodo para leer */
+  color: #67a6c5;
+  /* Cambia el color del texto */
+  text-align: justify;
+  /* Justifica el texto para mejorar su presentación */
+  text-indent: 30px;
+  /* Indenta la primera línea del párrafo */
+}
+
+/* 4. Estilo para el bloque de cita (blockquote) */
+blockquote {
+  font-style: italic;
+  /* Aplica estilo en cursiva */
+  color: #3b4172;
+  /* Cambia el color del bloque de cita */
+  background-color: #c5e1ee;
+  /* Usa un color de fondo suave para resaltarlo */
+  padding: 10px;
+  /* Añade espacio alrededor del texto */
+  border-left: 3px solid #3b4172;
+  /* Añade una línea de color a la izquierda para destacar */
+}
+
+/*
+  1. ¿Cómo cambia la apariencia del texto cuando aplicas diferentes colores y tamaños?
+  - Podemos hacer el texto más llamativo y atractivo para el lector.
+
+  2. ¿Qué combinación de propiedades y colores te parece más profesional o atractiva?
+  - Para las citas, una paleta de colores suaves como gris o azul puede transmitir elegancia
+  y profesionalismo.
+  */
