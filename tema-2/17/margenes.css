@@ -1,0 +1,13 @@
+.div1 h2 {
+    margin: solid 20px;
+    background-color: rgb(255, 192, 20);
+    
+}
+.div2 p {
+    margin: 10px 20px 30px 40px;
+    background-color: rgb(110, 199, 241);
+}
+.div3 button {
+    margin: 50px;
+    margin: auto;
+}

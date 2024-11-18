@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+}
+
+.titulo {
+    color: green;
+}
+
+#parrafo {
+    color: rgb(255, 166, 0);
+}
+
+div .texto {
+    color: purple !important;
+}
+
+p {
+    color: black;
+}
+
+/*
+    ● ¿Qué color se aplica finalmente al encabezado <h1>? Explica cuál fue la regla ganadora y 
+    por qué.
+Se aplica el color que le ponemos como un estilo en línea porque al haberlo especificado en 
+línea tienen es más específico que el estilo en el archivo CSS.
+
+    ● ¿Cuál es el color del párrafo con el ID parrafo? ¿Qué regla prevalece?
+El color es naranja ya que aplica la regla establecida con #id desde el css. Esto sucede porque
+es más específico al elemento que el resto de las reglas.
+
+    ● ¿Qué color tiene el párrafo con la clase texto dentro del div contenedor? Explica por qué
+    se aplica ese color en particular.
+Tiene el color púrpura porque la regla div .texto tiene la declaración !importan tiene prioridad
+sobre el resto de las reglas.
+*/
