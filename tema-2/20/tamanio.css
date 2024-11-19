@@ -1,0 +1,13 @@
+.div1 {
+    background-color: rgb(212, 206, 206);
+    width: 300px;
+    height: 300px;
+    border: 15px solid rgb(61, 156, 61);
+    padding: 50px;
+    margin: 20px;
+}
+
+/*
+Calcula la anchura y altura total del div:
+Tanto el alto como el ancho del div son 430px
+*/
