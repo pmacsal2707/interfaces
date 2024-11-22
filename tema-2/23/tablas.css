@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+caption {
+    caption-side: bottom;
+    font-size: 1.5em;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.par {
+    background-color: #f2f2f2;
+}
+
+.impar {
+    background-color: #ffffff;
+}
+
+td:empty {
+    background-color: #d5ebd6;
+    empty-cells: show;
+}
