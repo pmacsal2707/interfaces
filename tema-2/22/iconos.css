@@ -1,0 +1,28 @@
+/* Cambiar color al pasar el mouse */
+.bi:hover {
+    color: #28a745;
+}
+
+/* Diferente tamaño para icono de avión */
+.bi-airplane-engines {
+    font-size: 5rem;
+    color: #ff6347;
+}
+
+/* Cambiar el tamaño y color del teléfono */
+.fa-phone {
+    font-size: 4rem;
+    color: #ff5733;
+}
+
+/* Cambiar el tamaño y color de Twitter */
+.fa-twitter {
+    font-size: 3.5rem;
+    color: #1da1f2;
+}
+
+/* Rueda de engranaje */
+.fa-cog {
+    font-size: 10rem;
+    color: #6c757d;
+}
