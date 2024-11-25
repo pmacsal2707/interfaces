@@ -1,32 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-.block-element {
-    display: block;
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.inline-element {
+li {
     display: inline;
-    background-color: #d0e0f0;
-    padding: 5px;
-    margin-right: 5px;
 }
 
-.inline-block-element {
+.elemento {
     display: inline-block;
-    background-color: #f0d0d0;
-    padding: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
-.hidden-element {
-    display: none; /* Este elemento está oculto por defecto */
-    background-color: #f0f0f0;
+.elemento_oculto {
+    display: none;
+    background-color: rgb(255, 138, 138);
+}
+
+#elementos div {
+    display: block;
+}
+
+p {
+    border-style: dotted;
+    border-width: 3px;
+    margin: 20px;
     padding: 10px;
-    margin-top: 10px;
+    border-color: blue;
+    background-color: rgb(206, 206, 250);
 }
