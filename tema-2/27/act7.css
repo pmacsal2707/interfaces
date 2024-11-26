@@ -1,0 +1,26 @@
+header {
+    background-color: #FF8000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px ;
+    margin-bottom: 10px;
+}
+
+.column {
+    float: left;
+
+    padding: 20px;
+    background-color: #74c8ff;
+    margin-right: 10px;
+}
+
+.extra {
+    float: right;
+
+    padding: 20px;
+    background-color: #74c8ff;
+}
+
+footer {
+    clear: both;
+}
