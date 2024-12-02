@@ -1,0 +1,31 @@
+body {
+  color: #ffa500;
+}
+
+#id1 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  opacity: 0.5;
+}
+
+#id2 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5;
+}
+
+#id3 {
+  background-image: url("https://wallpapers.com/images/hd/mclaren-yellow-650s-gt3-fuw0m7vt1hya3xhv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+  opacity: 0.5;
+}
+
+#id1:hover, #id2:hover, #id3:hover {
+  opacity: 1.0;
+}
