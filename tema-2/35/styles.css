@@ -1,0 +1,45 @@
+body {
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1.title {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+section p {
+  font-family: 'Georgia', serif;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#override {
+  color: #FF5733 !important;
+}
+
+footer p {
+  font-size: 0.9em;
+  text-align: center;
+  color: gray;
+}
+
+/*
+    1. ¿Qué sucede si cambias el orden de las reglas CSS?
+    Puede sobreescribir los estilos dependiendo de la cascada y de la especifidad
+
+    2. ¿Cómo afecta la especificidad a los estilos aplicados en el párrafo #override?
+    La especificidad del ID en #override asegura que sus estilos tengan prioridad sobre
+    reglas de menor especificidad, es decir, al usar el id tendrá mayor prioridad.
+
+    3. ¿Qué sucede si eliminas el !important de alguna regla?
+    Sin !important, las reglas pueden ser sobrescritas por otras más específicas o con
+    mayor prioridad.
+
+    4. ¿Qué reglas son heredadas automáticamente y cuáles necesitas especificar explícitamente?
+    El color de texto y la fuente se heredan automáticamente, pero propiedades como fondo y 
+    negrita deben ser especificadas explícitamente
+*/
