@@ -1,32 +1,39 @@
-.navlist {
-    display: flex;
-    gap: 20px;
+.padre {
+    font-family: Arial, sans-serif;
+    color: blue;
+    font-size: 16px;
 }
 
-.icon_inicio, .icon_buscar, .icon_configuracion {
-    display: inline-block;
-    text-align: center;
-    color: white;
-    text-decoration: none;
+.heredado {
+    color: inherit;
 }
 
-.icon_inicio {
-    width: 90px;
-    height: 120px;
-    background: url(https://img.freepik.com/vector-gratis/conjunto-animacion-botella-pocion-nube-hojaldre_107791-18081.jpg) 0px 0px;
-    background-size: cover;
+.inherit {
+    color: inherit;
 }
 
-.icon_buscar {
-    width: 90px;
-    height: 120px;
-    background: url(https://img.freepik.com/vector-gratis/conjunto-animacion-botella-pocion-nube-hojaldre_107791-18081.jpg) -69px 0px;
-    background-size: cover;
+.initial {
+    color: initial;
 }
 
-.icon_configuracion {
-    width: 90px;
-    height: 120px;
-    background: url(https://img.freepik.com/vector-gratis/conjunto-animacion-botella-pocion-nube-hojaldre_107791-18081.jpg) -150px 0px;
-    background-size: cover;
+.unset {
+    color: unset;
 }
+
+.revert {
+    color: revert;
+}
+
+/*
+    ¿Qué estilo toma el texto con inherit? ¿Por qué?
+El texto hereda el color azul del elemento padre porque inherit obliga a tomar el valor del padre.
+
+    ¿Cómo se comporta el texto con initial? ¿Qué significa este valor?
+El texto toma el valor por defecto (normalmente negro) porque initial restablece la propiedad al valor predeterminado del navegador.
+
+    ¿Qué sucede con unset? ¿Es diferente para propiedades heredables y no heredables?
+Si la propiedad es heredable, unset la hereda del padre; si no lo es, la restablece al valor inicial.
+
+    ¿Cómo actúa revert en comparación con los otros valores?
+Revert devuelve el valor de la propiedad a lo que estaba antes en la cascada de reglas CSS.
+*/
