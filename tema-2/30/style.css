@@ -1,12 +1,31 @@
-a:hover {
-    color: #28a745;
+/* Estilos generales para los enlaces */
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
 }
-a:visited {
-    color: #ff6347;
-}
+
 a:link {
     color: #287fa7;
+    background-color: #e0e0e0;
 }
-a {
-    
+
+/* Estado para cuando el enlace ya haya sido visitado */
+a:visited {
+    color: #ff6347;
+    background-color: #f0f0f0;
+}
+
+/* Estado para cuando el puntero del ratón está sobre el enlace */
+a:hover {
+    color: #fff;
+    background-color: #28a745;
+}
+
+/* Estado para cuando el enlace es activado (click) */
+a:active {
+    background-color: #218838;
 }
