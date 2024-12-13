@@ -65,6 +65,7 @@ html, body {
     transform: translate(25px, -125px);
     transition: all 1s;
 }
+
 /* Cambio de tema (Modo oscuro) */
 body.dark-theme {
     background: #001;
@@ -120,75 +121,27 @@ nav ul li a:hover {
     color: #f4c542;
 }
 
-/* Sección de productos */
-.productos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cuadrícula responsiva */
-    gap: 20px;
-    padding: 20px;
-}
-
-.producto {
-    background-color: #3a3a3a;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding: 20px;
-    text-align: center;
-}
-
-.producto img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.producto h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: white;
-}
-
-.producto .price {
-    font-size: 1.2rem;
-    color: #f4c542;
-    font-weight: bold;
-}
-
-.producto .add-to-cart {
-    background-color: #3a3a3a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.producto .add-to-cart:hover {
-    background-color: #f4c542;
-}
-
-/* Efecto hover sobre los productos */
-.producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.producto img:hover {
-    transform: scale(1.05);
-}
-
-/* Sección principal */
+/* Secciones */
 main {
     padding: 20px;
     margin-top: 20px;
 }
 
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+section:hover {
+    transform: scale(1.005);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    background-color: #f4f4f4;
+}
 
 h2 {
     font-size: 2rem;

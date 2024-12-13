@@ -12,17 +12,23 @@
 <body>
 
     <!-- Encabezado -->
-    <header class="bg-success text-white text-center py-3">
-        <h1>Filamentopía</h1>
+    <header>
+        <h1>Mi Sitio Web</h1>
         <nav>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a class="text-white" href="index.html">Home</a></li>
-                <li class="list-inline-item"><a class="text-white" href="tienda.html">Tienda</a></li>
-                <li class="list-inline-item"><a class="text-white" href="empresa.html">Empresa</a></li>
-                <li class="list-inline-item"><a class="text-white" href="#.html">Contacto</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <button onclick="cambiarTema()">Cambiar Tema</button>
+        <div id="main">
+            <button id="moon" aria-label="Cambiar tema de la página">
+                <div id="moonspot1" class="spots"></div>
+                <div id="moonspot2" class="spots"></div>
+            </button>
+            <div id="cover"></div>
+        </div>
     </header>
 
     <!-- Sección principal de Contacto -->
@@ -31,7 +37,7 @@
             <h2 class="text-center">Contacto</h2>
 
             <!-- Información de contacto -->
-            <div class="info-contacto mb-4">
+            <div class="info-contacto">
                 <h3 class="text-success">¡Estamos para ayudarte!</h3>
                 <p><strong>Teléfono:</strong> +34 652 54 78 78</p>
                 <p><strong>Email:</strong> <a href="mailto:filamentopía@filamentopia.com">filamentopía@filamentopia.com</a></p>
@@ -80,15 +86,11 @@
     </footer>
     
     <script>
-        function cambiarTema() {
-            const link = document.getElementById('themeLink');
-            if (link.getAttribute('href') === 'css/theme-dark.css') {
-                link.setAttribute('href', 'css/theme-light.css');
-            } else {
-                link.setAttribute('href', 'css/theme-dark.css');
-            }
-        }
-    </script>
+        // Cambio de tema con JavaScript
+        document.getElementById('moon').addEventListener('click', () => {
+          document.body.classList.toggle('dark-theme');
+        });
+      </script>
 </body>
 
 </html>

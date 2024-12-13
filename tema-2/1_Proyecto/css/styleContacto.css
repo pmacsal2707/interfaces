@@ -1,160 +1,238 @@
-/* Reset de márgenes y paddings */
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
+    height: 100%;
+    font-family: "Arial", sans-serif;
     line-height: 1.6;
-    background-color: #e5e5e5; /* Gris suave */
-    color: #333; /* Gris oscuro */
+    background-color: #f7f7f7;
+    color: #333;
+    overflow-x: hidden;
+    transition: all 1s;
 }
 
-/* Encabezado */
+/* Contenedor principal para el botón lunar */
+#main {
+    position: fixed;
+    top: 12.5%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo del botón lunar (luna) */
+#moon {
+    width: 100px;
+    height: 100px;
+    background: #eef; /* Luna en el modo claro */
+    border-radius: 50%;
+    position: relative;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+#moon .spots {
+    border-radius: 50%;
+    background: #ccd; /* Cráteres visibles en luna */
+    transition: all 1s;
+    position: absolute;
+}
+
+/* Posición de los cráteres */
+#moonspot1 {
+    width: 15px;
+    height: 15px;
+    top: 40%;
+    left: 5%;
+}
+
+#moonspot2 {
+    width: 6px;
+    height: 6px;
+    top: 70%;
+    left: 25%;
+}
+
+/* Cobertura y animación (sol cubriendo la luna) */
+#cover {
+    width: 100px;
+    height: 100px;
+    background: #3a3a3a;
+    border-radius: 50%;
+    transform: translate(25px, -125px);
+    transition: all 1s;
+}
+
+/* Cambio de tema (Modo oscuro) */
+body.dark-theme {
+    background: #001;
+}
+
+body.dark-theme #moon {
+    background: #f6d602;
+    border: 5px solid #f5eb71;
+}
+
+body.dark-theme #moon .spots {
+    width: 0;
+    height: 0;
+    background: #f6d602;
+}
+
+body.dark-theme #cover {
+    background: #3a3a3a;
+    transform: translate(85px, -185px);
+}
+
+/* Estilos del encabezado */
 header {
-    background-color: #3a3a3a; /* Gris oscuro */
-    color: white;
+    background-color: #3a3a3a;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
     font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    color: #f4c542; /* Dorado al pasar el ratón */
+    color: #f4c542;
 }
 
-/* Sección de Contacto */
+/* Sección principal de contacto */
+main.container {
+    padding: 40px;
+}
+
 #contacto {
-    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.info-contacto {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Títulos */
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.info-contacto h3 {
-    color: #3a3a3a; /* Gris oscuro */
+h3.text-success {
+    color: #28a745;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
 }
 
+/* Información de contacto en modo oscuro */
+.info-contacto {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Información de contacto */
 .info-contacto p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    margin: 10px 0;
 }
 
 .info-contacto a {
-    color: #3a3a3a;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .info-contacto a:hover {
-    color: #f4c542; /* Dorado */
+    color: #0056b3;
 }
 
 /* Formulario de contacto */
-.formulario-contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaciado entre los campos del formulario */
-    max-width: 600px; /* Limitar el tamaño máximo del formulario */
-    margin: 0 auto; /* Centrar el formulario */
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    background-color: #3a3a3a; /* Fondo blanco */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 30px; /* Separación con la sección anterior */
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-label {
-    font-weight: bold;
+.form-group label {
+    font-size: 1.1rem;
     margin-bottom: 5px;
-    font-size: 1.1em;
+    display: block;
 }
 
-input,
-select,
-textarea {
-    padding: 12px;
-    border-radius: 5px;
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
     border: 1px solid #ccc;
-    font-size: 1em;
-    background-color: #f9f9f9; /* Fondo claro */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    transition: border-color 0.3s;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
+.form-control:focus {
+    border-color: #28a745;
     outline: none;
-    border-color: #f4c542; /* Bordes dorados al hacer foco */
-    box-shadow: 0 0 5px rgba(244, 196, 66, 0.5); /* Sombra dorada */
 }
 
-textarea {
-    resize: vertical; /* Permitir redimensionar la altura de la caja de texto */
-    min-height: 120px; /* Altura mínima para el área de texto */
-}
-
-button {
-    background-color: #3a3a3a; /* Gris oscuro */
+/* Estilo para el botón de envío */
+.btn-success {
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
+    font-size: 1.1rem;
     cursor: pointer;
-    font-size: 1.1em;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #555555; /* Gris más claro */
+.btn-success:hover {
+    background-color: #218838;
 }
 
-/* Mapa */
+/* Mapa de ubicación */
 .mapa-ubicacion iframe {
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 /* Pie de página */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #3a3a3a; /* Gris oscuro */
+    background-color: #28a745;
     color: white;
+    text-align: center;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
 }
 
 footer a {
@@ -164,13 +242,32 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
-}
-
-footer div {
-    margin-top: 10px;
-}
-
-footer a:hover {
     color: #f4c542;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    main.container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .info-contacto p {
+        font-size: 1rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-success {
+        font-size: 1rem;
+    }
 }
