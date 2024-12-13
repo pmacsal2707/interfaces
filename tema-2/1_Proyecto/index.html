@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filamentopía - Sobre nosotros</title>
+    <link rel="stylesheet" href="css/sytyleIndex.css">
+    <link id="themeLink" rel="stylesheet" href="css/theme-light.css"> <!-- Enlace al tema oscuro por defecto -->
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Sobre nosotros</h1>
+        <nav>   
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón para cambiar el tema -->
+        <button onclick="cambiarTema()">Cambiar Tema</button>
+    </header>
+
+    <!-- Sección de Visión y Misión -->
+    <section>
+        <h2>Visión y Misión de Filamentopía</h2>
+        <article>
+            <div>
+                <h3>Visión</h3>
+                <p>Conectar el plástico reciclado con la comunidad para un futuro más sostenible.</p>
+            </div>
+            <div>
+                <h3>Misión</h3>
+                <p>Recoger y reciclar plástico de desecho para convertirlo en filamento para impresoras 3D, reduciendo el impacto ambiental.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sección sobre el filamento -->
+    <section>
+        <h2>¿Qué es el Filamento?</h2>
+        <p>El filamento es el material utilizado en la impresión 3D, y se crea a través de un proceso que implica la fusión de plásticos. En Filamentopía, reciclamos plásticos de desecho para crear filamento de alta calidad y contribuir a la sostenibilidad del planeta.</p>
+    </section>
+
+    <!-- Sección de Proceso de Reciclaje y Producción -->
+    <section>
+        <h2>Proceso de Reciclaje y Producción</h2>
+        <ul>
+            <li><strong>Colaboración con Proveedores:</strong> Establecemos alianzas con proveedores que gestionan residuos plásticos para recoger el material necesario.</li>
+            <li><strong>Clasificación del Material:</strong> Se clasifica el plástico, separando los materiales adecuados para su reciclaje.</li>
+            <li><strong>Conversión en Filamento:</strong> El plástico reciclado se funde y se convierte en filamento, listo para su uso en impresoras 3D.</li>
+        </ul>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function cambiarTema() {
+            const link = document.getElementById('themeLink');
+            if (link.getAttribute('href') === 'css/theme-dark.css') {
+                link.setAttribute('href', 'css/theme-light.css'); // Cambia a tema claro
+            } else {
+                link.setAttribute('href', 'css/theme-dark.css'); // Cambia a tema oscuro
+            }
+        }
+    </script>
+
+</body>
+</html>

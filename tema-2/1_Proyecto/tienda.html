@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda de Productos</title>
+    <link rel="stylesheet" href="css/styleTienda.css">
+    <link id="themeLink" rel="stylesheet" href="css/theme-light.css">
+</head>
+<body>
+    <header>
+        <h1>Sobre Nosotros</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#.html">Tienda</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <button onclick="cambiarTema()">Cambiar Tema</button>
+    </header>
+
+    <main>
+        <section class="productos-container">
+            <div class="producto">
+                <img src="https://via.placeholder.com/250" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p class="price">$20.00</p>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/250" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p class="price">$30.00</p>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://via.placeholder.com/250" alt="Producto 3">
+                <h3>Producto 3</h3>
+                <p class="price">$15.00</p>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Tienda en Línea. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function cambiarTema() {
+            const link = document.getElementById('themeLink');
+            if (link.getAttribute('href') === 'css/theme-dark.css') {
+                link.setAttribute('href', 'css/theme-light.css');
+            } else {
+                link.setAttribute('href', 'css/theme-dark.css');
+            }
+        }
+    </script>
+</body>
+</html>

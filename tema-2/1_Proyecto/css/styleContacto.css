@@ -1,0 +1,176 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e5e5e5; /* Gris suave */
+    color: #333; /* Gris oscuro */
+}
+
+/* Encabezado */
+header {
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #f4c542; /* Dorado al pasar el ratón */
+}
+
+/* Sección de Contacto */
+#contacto {
+    padding: 20px;
+}
+
+.info-contacto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.info-contacto h3 {
+    color: #3a3a3a; /* Gris oscuro */
+}
+
+.info-contacto p {
+    font-size: 1.1em;
+}
+
+.info-contacto a {
+    color: #3a3a3a;
+}
+
+.info-contacto a:hover {
+    color: #f4c542; /* Dorado */
+}
+
+/* Formulario de contacto */
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre los campos del formulario */
+    max-width: 600px; /* Limitar el tamaño máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background-color: #f9f9f9; /* Fondo claro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f4c542; /* Bordes dorados al hacer foco */
+    box-shadow: 0 0 5px rgba(244, 196, 66, 0.5); /* Sombra dorada */
+}
+
+textarea {
+    resize: vertical; /* Permitir redimensionar la altura de la caja de texto */
+    min-height: 120px; /* Altura mínima para el área de texto */
+}
+
+button {
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555555; /* Gris más claro */
+}
+
+/* Mapa */
+.mapa-ubicacion iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer div {
+    margin-top: 10px;
+}
+
+footer a:hover {
+    color: #f4c542;
+}

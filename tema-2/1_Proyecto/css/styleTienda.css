@@ -1,0 +1,214 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e5e5e5; /* Gris suave */
+    color: #333; /* Gris oscuro */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #f4c542; /* Dorado suave */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0b030; /* Dorado más oscuro */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo del título h1 */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4c542; /* Dorado al pasar el ratón */
+}
+
+/* Diseño responsivo para móviles */
+@media (max-width: 768px) {
+    header {
+        text-align: left;
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Contenedor de productos con Flexbox */
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsivo */
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    position: relative;
+    background: #fff; /* Blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: scale(1.05); /* Efecto de escala */
+    z-index: 2; /* Asegura que al pasar el ratón el producto se resalte */
+}
+
+/* Imágenes con bordes redondeados */
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los precios */
+.product-price {
+    font-size: 18px;
+    color: #f4c542; /* Dorado */
+}
+
+/* Botón de añadir al carrito con efecto */
+.add-to-cart {
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #555555; /* Gris más claro */
+    transform: scale(1.1);
+}
+
+/* Selector avanzado */
+.producto > img {
+    margin-bottom: 15px;
+}
+
+/* Diseño responsivo con media queries */
+@media (max-width: 768px) {
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        padding: 10px; /* Menos relleno en dispositivos pequeños */
+    }
+
+    .producto img {
+        width: 80%;
+    }
+
+    .add-to-cart {
+        padding: 10px 15px;
+    }
+}
+
+/* Uso de pseudoclases y pseudoelementos */
+.add-to-cart:hover {
+    background-color: #555555;
+    transform: scale(1.1);
+}
+
+.add-to-cart::before {
+    content: '🛒'; /* Icono de carrito */
+    margin-right: 10px;
+}
+
+.producto::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #f4c542; /* Dorado */
+    margin-top: 10px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #3a3a3a; /* Gris oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
