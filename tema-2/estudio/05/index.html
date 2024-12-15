@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Attachment Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General section styles */
+        section {
+            height: 100vh; /* Full viewport height */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Section 1: Scroll behavior */
+        .scroll-section {
+            background-image: url('https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/10/ferrari-f80-4250635.jpg?tf=3840x');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section 2: Fixed behavior */
+        .fixed-section {
+            background-image: url('https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/10/ferrari-f80-4250635.jpg?tf=3840x');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section 3: Local behavior */
+        .local-section {
+            background-image: url('https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/10/ferrari-f80-4250635.jpg?tf=3840x');
+            background-size: cover;
+            background-position: center;
+            background-attachment: local;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Optional style for the explanatory paragraph */
+        .explanation {
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<section class="scroll-section">
+    <p id="sinOpacidad">Background-Attachment: Scroll</p>
+</section>
+
+<section class="fixed-section">
+    <p>Background-Attachment: Fixed</p>
+</section>
+
+<section class="local-section">
+    <p>Background-Attachment: Local</p>
+</section>
+
+<div class="explanation">
+    <h3>Observaciones:</h3>
+    <p>Al usar diferentes valores para <code>background-attachment</code>, el comportamiento de la imagen de fondo cambia:</p>
+    <ul>
+        <li><strong>Scroll:</strong> La imagen de fondo se desplaza junto con el contenido cuando haces scroll.</li>
+        <li><strong>Fixed:</strong> La imagen de fondo permanece fija en su posición, independientemente del scroll del contenido.</li>
+        <li><strong>Local:</strong> La imagen de fondo se desplaza solo dentro de la sección cuando el contenido interno tiene scroll.</li>
+    </ul>
+</div>
+
+</body>
+</html>

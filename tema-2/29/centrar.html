@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 28</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="contenedor_principal">
-        <div class="bloque_centrado">
-            <p>Un elemento de bloque centrado horizontalmente</p>
-        </div>
-
-        <div class="texto_centrado">
-            <p>Texto centrado dentro de un contenedor.</p>
-        </div>
-
-        <!-- Imagen centrada horizontalmente -->
-        <div class="imagen-centrada">
-            <img src="https://cdn.pixabay.com/photo/2019/05/23/02/21/mclaren-4223024_1280.jpg" alt="Imagen_centrada">
-        </div>
-
-        <div class="alineados">
-            <div class="izquierda">Alineado a la izquierda</div>
-            <div class="derecha">Alineado a la derecha</div>
-        </div>
-
-        <div class="centrado_vertical">
-            <p>Este texto está centrado verticalmente.</p>
-        </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Ejercicio Overflow</h1>
+    <div class="container overflow-visible">
+      <p>
+        Este es un texto muy largo que se utiliza para observar cómo se comporta
+        el contenido dentro del contenedor cuando se aplica overflow. Puedes
+        modificar la clase del contenedor para ver los diferentes resultados.
+      </p>
     </div>
-</body>
+    <div class="container overflow-hidden">
+      <p>
+        Este es un texto muy largo que se utiliza para observar cómo se comporta
+        el contenido dentro del contenedor cuando se aplica overflow. Puedes
+        modificar la clase del contenedor para ver los diferentes resultados.
+      </p>
+    </div>
+    <div class="container overflow-scroll">
+      <p>
+        Este es un texto muy largo que se utiliza para observar cómo se comporta
+        el contenido dentro del contenedor cuando se aplica overflow. Puedes
+        modificar la clase del contenedor para ver los diferentes resultados.
+      </p>
+    </div>
+    <div class="container overflow-auto">
+      <p>
+        Este es un texto muy largo que se utiliza para observar cómo se comporta
+        el contenido dentro del contenedor cuando se aplica overflow. Puedes
+        modificar la clase del contenedor para ver los diferentes resultados.
+      </p>
+    </div>
+    <h2>Configuración de ejes</h2>
+    <div class="container overflow-x-scroll overflow-y-hidden">
+      <p>
+        Este es un texto muy largo que se utiliza para observar cómo se comporta
+        el contenido con configuración independiente de los ejes.
+      </p>
+    </div>
+  </body>
 </html>

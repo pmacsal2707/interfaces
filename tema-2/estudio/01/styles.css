@@ -1,0 +1,23 @@
+h1, h2 {
+    color: blue;
+}
+
+.contenedor p {
+    color: lightgray;
+}
+
+ul > li {
+    list-style: none;
+}
+
+div ~ p {
+    margin-top: 20px;
+}
+
+h1 + p {
+    font-size: 16px;
+}
+
+div span {
+    background-color: yellow;
+}

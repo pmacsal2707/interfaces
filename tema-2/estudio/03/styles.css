@@ -1,0 +1,19 @@
+h1 {
+    color: orange;
+}
+
+.titulo {
+    color: cadetblue;
+}
+
+#parrafo {
+    color: coral;
+}
+
+.contenedor .texto {
+    color: cornflowerblue !important;
+}
+
+p {
+    color: chartreuse;
+}
