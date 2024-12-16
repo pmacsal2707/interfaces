@@ -192,6 +192,12 @@ footer nav ul li a:hover {
     color: #f4c542;  /* Color dorado al hacer hover */
 }
 
+#about-us .about-content {
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center;  /* Centra los elementos verticalmente */
+}
+
 /* Estilos generales para la sección "about-content" */
 #about-us2 .about-content {
     display: flex; /* Flexbox para alinear elementos */
