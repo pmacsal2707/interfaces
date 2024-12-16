@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Definimos el conjunto de caracteres para la página -->
+    <meta charset="UTF-8">
+    
+    <!-- Meta etiqueta para hacer que la página sea responsiva en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título de la página -->
+    <title>Filamentopía - Contacto</title>
+    
+    <!-- Enlace al archivo CSS para estilos específicos de la página de contacto -->
+    <link rel="stylesheet" href="css/styleContacto.css">
+    
+    <!-- Enlace al archivo CSS para tema claro -->
+    <link id="themeLink" rel="stylesheet" href="css/theme-light.css">
+</head>
+
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Título principal de la página -->
+        <h1>Filamentopía</h1>
+        
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Contenedor para el botón que cambia el tema de la página -->
+        <div id="main">
+            <button id="moon" aria-label="Cambiar tema de la página">
+                <!-- Elementos visuales que componen el icono de la luna -->
+                <div id="moonspot1" class="spots"></div>
+                <div id="moonspot2" class="spots"></div>
+            </button>
+            <div id="cover"></div>
+        </div>
+    </header>
+
+    <!-- Sección principal de la página de contacto -->
+    <main class="container mt-5">
+        <section id="contacto">
+            <!-- Título de la sección de contacto -->
+            <h2 class="text-center">Contacto</h2>
+
+            <!-- Información de contacto de la empresa -->
+            <div class="info-contacto">
+                <h3 class="text-success">¡Estamos para ayudarte!</h3>
+                <!-- Información de contacto: teléfono, correo electrónico, sitio web y dirección -->
+                <p><strong>Teléfono:</strong> +34 652 54 78 78</p>
+                <p><strong>Email:</strong> <a href="mailto:filamentopía@filamentopia.com">filamentopía@filamentopia.com</a></p>
+                <p><strong>Web:</strong> <a href="https://www.filamentopia.com" class="text-primary">www.filamentopia.com</a></p>
+                <p><strong>Dirección:</strong> Calle Blas Infante, Bloque 4, Portal 3, 2º B, Villamartín - 11650/Cádiz/Andalucía, España</p>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div class="formulario-contacto mb-4">
+                <form action="#" method="POST" class="needs-validation" novalidate>
+                    <!-- Campo para ingresar el nombre -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+
+                    <!-- Campo para ingresar el correo electrónico -->
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" class="form-control" required>
+                    </div>
+
+                    <!-- Campo para ingresar el mensaje -->
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+                    </div>
+
+                    <!-- Botón para enviar el formulario -->
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Sección para mostrar un mapa de la ubicación -->
+            <div class="mapa-ubicacion text-center">
+                <!-- Incrustamos un mapa de Google -->
+                <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_LINK_HERE" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-success text-white text-center py-3">
+        <!-- Derechos reservados y enlaces a la política de privacidad y términos de servicio -->
+        <p>&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
+        <p><a class="text-white" href="#">Política de privacidad</a> | <a class="text-white" href="#">Términos de servicio</a></p>
+        <div>
+            <!-- Enlaces a redes sociales -->
+            <a class="text-white" href="#">Facebook</a>
+            <a class="text-white" href="#">Twitter</a>
+            <a class="text-white" href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Script para cambiar el tema (claro/oscuro) -->
+    <script>
+        // Cambio de tema con JavaScript
+        document.getElementById('moon').addEventListener('click', () => {
+          // Alterna entre los temas claro y oscuro
+          document.body.classList.toggle('dark-theme');
+        });
+      </script>
+</body>
+
+</html>

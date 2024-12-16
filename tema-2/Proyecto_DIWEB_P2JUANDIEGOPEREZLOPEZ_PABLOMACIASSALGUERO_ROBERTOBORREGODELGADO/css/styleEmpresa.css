@@ -1,0 +1,179 @@
+/* Estilos generales */
+* {
+    margin: 0; /* Elimina el margen por defecto de los elementos */
+    padding: 0; /* Elimina el padding por defecto de los elementos */
+    box-sizing: border-box; /* Hace que el padding y el border se incluyan en las dimensiones de los elementos */
+}
+
+html, body {
+    height: 100%; /* Establece que tanto el html como el body ocupen toda la altura de la ventana */
+    font-family: "Arial", sans-serif; /* Define la fuente principal */
+    line-height: 1.6; /* Establece la altura de línea para facilitar la lectura */
+    background-color: #f7f7f7; /* Color de fondo del body */
+    color: #333; /* Color de texto por defecto */
+    overflow-x: hidden; /* Elimina el desbordamiento horizontal */
+    transition: all 0.5s; /* Transición para aplicar cambios suaves en todo el documento */
+}
+
+/* Contenedor del encabezado */
+.header-container {
+    display: flex; /* Utiliza Flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    padding: 10px 20px; /* Añade espacio alrededor del contenido */
+    background-color: #3a3a3a; /* Fondo oscuro para el encabezado */
+    color: white; /* Color de texto blanco */
+}
+
+/* Estilo para el icono de la luna */
+#moon {
+    width: 50px; /* Tamaño del icono */
+    height: 50px; /* Tamaño del icono */
+    background: #eef; /* Color claro para la luna en el modo claro */
+    border-radius: 50%; /* Hace el icono circular */
+    position: relative; /* Posiciona el icono relativo a su contenedor */
+    transition: all 0.5s; /* Transición suave para los cambios */
+    cursor: pointer; /* Cambia el cursor a mano para indicar que es clickeable */
+}
+
+/* Estilo de los cráteres de la luna */
+#moon .spots {
+    border-radius: 50%; /* Hace los cráteres circulares */
+    background: #ccd; /* Color de los cráteres */
+    position: absolute; /* Posiciona los cráteres dentro de la luna */
+}
+
+/* Posición de los cráteres */
+#moonspot1 {
+    width: 10px; /* Tamaño del primer cráter */
+    height: 10px; /* Tamaño del primer cráter */
+    top: 30%; /* Posición del primer cráter dentro de la luna */
+    left: 30%; /* Posición del primer cráter dentro de la luna */
+}
+
+#moonspot2 {
+    width: 5px; /* Tamaño del segundo cráter */
+    height: 5px; /* Tamaño del segundo cráter */
+    top: 60%; /* Posición del segundo cráter dentro de la luna */
+    left: 50%; /* Posición del segundo cráter dentro de la luna */
+}
+
+/* Estilos para el tema oscuro */
+body.dark-theme {
+    background-color: #001; /* Color de fondo oscuro para el tema oscuro */
+    color: #eee; /* Color de texto claro para el tema oscuro */
+}
+
+/* Estilo de la luna en modo oscuro */
+body.dark-theme #moon {
+    background-color: #f6d602; /* Cambia el color de la luna en modo oscuro */
+}
+
+/* Estilo del título principal */
+header h1 {
+    font-size: 2rem; /* Tamaño de fuente para el título */
+}
+
+/* Estilo para la lista de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Utiliza Flexbox para distribuir los elementos de la lista */
+    gap: 20px; /* Espacio entre los elementos de la lista */
+}
+
+/* Estilo para los enlaces de la navegación */
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color de los enlaces */
+    font-size: 1.2rem; /* Tamaño de fuente para los enlaces */
+    transition: color 0.3s; /* Transición suave para el color de los enlaces */
+}
+
+/* Estilo para los enlaces al pasar el ratón sobre ellos */
+nav ul li a:hover {
+    color: #f4c542; /* Cambia el color a amarillo cuando se pasa el ratón */
+}
+
+/* Estilo para el contenedor de productos */
+.productos-container {
+    display: grid; /* Utiliza un diseño de cuadrícula para los productos */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Configura las columnas para adaptarse al tamaño de la pantalla */
+    gap: 20px; /* Espacio entre los productos */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilo para cada producto */
+.producto {
+    background-color: #3a3a3a; /* Fondo oscuro para los productos */
+    border-radius: 8px; /* Bordes redondeados para los productos */
+    text-align: center; /* Centra el contenido dentro del producto */
+    padding: 20px; /* Añade espacio dentro de cada producto */
+    color: white; /* Color de texto blanco */
+}
+
+/* Estilo para las imágenes de los productos */
+.producto img {
+    width: 100%; /* Hace que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+/* Estilo para el área de pedido */
+#pedido {
+    margin: 20px; /* Margen alrededor del área de pedido */
+    background-color: #3a3a3a; /* Fondo oscuro para el área de pedido */
+    padding: 20px; /* Espacio dentro del área de pedido */
+    border-radius: 8px; /* Bordes redondeados para el área de pedido */
+    color: white; /* Color de texto blanco */
+}
+
+/* Estilo para los campos de entrada dentro del formulario de pedido */
+#pedido form input, 
+#pedido form select, 
+#pedido form textarea, 
+#pedido form button {
+    width: 100%; /* Hace que los campos de formulario ocupen todo el ancho */
+    padding: 10px; /* Añade espacio dentro de los campos */
+    margin-top: 5px; /* Añade espacio encima de los campos */
+    border-radius: 5px; /* Bordes redondeados para los campos */
+    border: none; /* Elimina el borde predeterminado */
+}
+
+/* Estilo para el botón de enviar del formulario */
+#pedido form button {
+    background-color: #f4c542; /* Color de fondo amarillo para el botón */
+    color: #333; /* Color de texto oscuro */
+    cursor: pointer; /* Cambia el cursor a mano cuando el ratón pasa por encima */
+    transition: 0.03s; /* Añadimos ina transicion */
+}
+
+#pedido form button:hover {
+    background-color: #3a3a3a; /* Color de fondo ocuro para el botón */
+    color: #f4c542; /* Color de texto amarillo */
+    cursor: pointer; /* Cambia el cursor a mano cuando el ratón pasa por encima */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #3a3a3a; /* Fondo oscuro para el pie de página */
+    color: white; /* Color de texto blanco */
+    padding: 20px; /* Espacio dentro del pie de página */
+    display: flex; /* Utiliza Flexbox para organizar los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        /* Cambia la dirección del layout a columna en pantallas pequeñas */
+        flex-direction: column;
+        /* Alinea los elementos al inicio en lugar de al centro */
+        align-items: flex-start;
+    }
+
+    nav ul {
+        /* Coloca los enlaces de navegación en columna */
+        flex-direction: column;
+        /* Reduce el espacio entre los enlaces */
+        gap: 10px;
+    }
+}

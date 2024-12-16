@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Definición de la codificación de caracteres para soportar caracteres especiales y acentos -->
+    <meta charset="UTF-8">
+    <!-- Configuración para que el diseño sea adecuado a diferentes tamaños de pantalla (móviles, tabletas, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Filamentopía - Home</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
+    <!-- Vinculación al archivo de estilos CSS para la página -->
+    <link rel="stylesheet" href="css/styleIndex.css">
+    
+    <!-- Favicon que aparece en la pestaña del navegador -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body id="bdy">
+    <!-- Header (Encabezado de la página) -->
+    <header>
+        <div class="container header-container">
+            <!-- Título principal del sitio -->
+            <h1>Filamentopía</h1>
+
+            <!-- Menú de navegación con enlaces a las diferentes secciones del sitio -->
+            <nav aria-label="Menú principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón para cambiar el tema de la página entre claro y oscuro -->
+            <div id="theme-switcher">
+                <button id="moon" aria-label="Cambiar entre tema claro y oscuro">
+                    <div id="moonspot1" class="spots"></div>
+                    <div id="moonspot2" class="spots"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección Hero, una sección destacada con una frase promocional -->
+        <section class="hero">
+            <div>
+                <p>Descubre los mejores filamentos para tus impresoras 3D con Filamentopía</p>
+            </div>
+        </section>
+
+        <!-- Sección de "Quiénes somos", explica la misión de la empresa -->
+        <section id="about-us">
+            <h2>¿Quiénes somos?</h2>
+            <div class="about-content">
+                <p>En Filamentopía, nuestra pasión por la impresión 3D nos motiva a ofrecer productos y servicios que marcan la diferencia. Entendemos que cada proyecto tiene sus propias necesidades, ya sea un diseño creativo, un prototipo funcional o una pieza técnica. Por eso, nuestra gama de filamentos está cuidadosamente seleccionada para garantizar que siempre encuentres el material adecuado para tus objetivos.</p>
+                
+                <!-- Imagen representativa de la empresa -->
+                <img src="https://hinojosagroup.com/wp-content/uploads/2018/07/empresa_humana.jpg" alt="Nuestro equipo" style="max-width: 50%; border-radius: 8px;">
+            </div>
+        </section>
+
+        <!-- Sección sobre las razones para elegir Filamentopía como proveedor -->
+        <section id="about-us2">
+            <h2>¿Por qué elegir Filamentopía?</h2>
+            <p>Nuestro equipo de expertos está listo para asesorarte, desde la elección del filamento ideal hasta consejos prácticos para tus proyectos.
+                Variedad para todos, contamos con una amplia selección de materiales como PLA, ABS, PETG, nylon, flexibles y compuestos de madera o metal.
+                Ofrecemos guías detalladas, tutoriales y un servicio técnico dedicado para resolver cualquier duda o problema que encuentres en tus impresiones.</p>
+            
+            <br><br>
+
+            <!-- Imágenes de impresoras 3D relacionadas con la temática -->
+            <div class="about-content">
+                <div class="img-container left">
+                    <img src="https://www.mastoner.com/blog/wp-content/uploads/2023/03/Como-colocar-filamento-en-impresora-3D.jpg" alt="Impresora 3D">
+                </div>
+                <div class="img-container center">
+                    <img src="https://servitec3d.com/wp-content/uploads/2024/05/impresora-3d-futurista.jpg" alt="Impresora 3D">
+                </div>
+                <div class="img-container right">
+                    <img src="https://aratecnia.es/wp-content/uploads/2019/11/que-son-como-funcionan-impresoras-3d-00.jpg" alt="Impresora 3D">
+                </div>
+            </div>
+            <br>
+        </section>
+    </main>
+
+    <!-- Footer (Pie de página) -->
+    <footer>
+        <div class="container footer-container">
+            <!-- Mensaje de derechos de autor -->
+            <p>&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
+            
+            <!-- Menú de navegación en el pie de página -->
+            <nav aria-label="Menú del pie de página">
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos de servicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para cambiar entre el tema claro y oscuro -->
+    <script>
+      // Evento que cambia el tema al hacer clic en el botón del "moon"
+      document.getElementById('moon').addEventListener('click', () => {
+        // Se alterna la clase 'dark-theme' en el body para activar o desactivar el tema oscuro
+        document.body.classList.toggle('dark-theme');
+      });
+    </script>
+</body>
+
+</html>

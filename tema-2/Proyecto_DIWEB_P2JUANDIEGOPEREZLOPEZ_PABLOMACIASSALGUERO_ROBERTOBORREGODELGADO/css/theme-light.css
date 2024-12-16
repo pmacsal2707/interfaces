@@ -1,0 +1,29 @@
+/* Tema claro */
+body {
+    background-color: #fff; /* Blanco */
+    color: #333; /* Gris oscuro */
+}
+
+header {
+    background-color: #3a3a3a; /* Gris oscuro elegante */
+}
+
+button {
+    background-color: #f4c542; /* Dorado suave */
+}
+
+button:hover {
+    background-color: #e0b030; /* Dorado más oscuro */
+}
+
+.producto {
+    background-color: #fff; /* Blanco */
+}
+
+.producto:hover {
+    background-color: #f9f9f9; /* Gris muy suave */
+}
+
+footer {
+    background-color: #3a3a3a; /* Gris oscuro elegante */
+}
