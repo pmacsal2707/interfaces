@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Cabecera -->
+        <header class="header">
+            <h1>¡Bienvenido a nuestra Landing Page!</h1>
+            <p>Promocionando un producto o evento único</p>
+        </header>
+
+        <!-- Galería Principal -->
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="galeria1.jpg" alt="Imagen 1" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="galeria2.jpg" alt="Imagen 2" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="galeria3.jpg" alt="Imagen 3" class="gallery-img">
+            </div>
+        </section>
+
+        <!-- Sección de Contenido -->
+        <section class="content">
+            <div class="content-header">
+                <h2>Descubre nuestro producto</h2>
+                <p>Una experiencia diseñada para superar tus expectativas.</p>
+            </div>
+            <div class="content-body">
+                <div class="content-image">
+                    <img
+                        src="contenido-pequeño.jpg"
+                        srcset="contenido-grande.jpg 1024w, contenido-mediana.jpg 768w, contenido-pequeño.jpg 480w"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        alt="Vista del producto"
+                        class="responsive-img">
+                </div>
+                <div class="content-details">
+                    <ul class="feature-list">
+                        <li>✔ Diseño moderno y funcional</li>
+                        <li>✔ Materiales de alta calidad</li>
+                        <li>✔ Garantía de satisfacción</li>
+                    </ul>
+                    <a href="#!" class="cta-btn">Explora más</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de Página -->
+        <footer class="footer">
+            <a href="#!" class="footer-btn">
+                <span>Más Información</span>
+            </a>
+            <p class="credits">
+                Imágenes cortesía de <a
+                    href="https://cars.mclaren.press/gallery"
+                    target="_blank">McLaren Press</a>.
+            </p>
+        </footer>
+    </body>
+</html>
