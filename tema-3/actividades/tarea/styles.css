@@ -1,0 +1,65 @@
+/* Fuente elegante y moderna */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* Estilo del mensaje de error */
+.no-audio {
+    color: #e74c3c;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilo para los controles de audio */
+audio {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 15px;
+    display: block;
+    background-color: #fff;
+    border: 2px solid #3498db;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Estilo para cuando el mouse pasa sobre el audio */
+audio:hover {
+    transform: scale(1.05);
+    border-color: #1abc9c;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #1abc9c;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #16a085;
+}
+
+
+/* Mejorar la visualización de la etiqueta <audio> cuando no está soportada */
+audio + p {
+    color: #f39c12;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Estilo de contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
