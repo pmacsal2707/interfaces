@@ -1,14 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Reproductor de Video</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+        video {
+            border: 2px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+        .enlaces {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .controles {
+            text-align: center;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .volumen {
+            width: 200px;
+            margin: 0 10px;
+        }
+
+    </style>
     </head>
     <body>
-        <video width="320" height="240" controls>
+        <h1>Reproductor de Video</h1>
+
+        <video id="video" width="640" height="480" poster="caratula.jpg" preload="auto">
             <source src="video_mp4.mp4" type="video/mp4">
             <source src="video_webm.webm" type="video/webm">
+            <source src="video_ogg.ogg" type="video/ogg">
+            <!-- Mensaje para navegadores que no soportan los formatos -->
+            Tu navegador no soporta el formato de video.
         </video>
+
+        <div class="controles">
+            <button onclick="playPause()"><i class="fas fa-play"></i><i class="fas fa-pause"></i></button>
+            <button onclick="volumen()"><i class="fas fa-volume-up"></i><i class="fas fa-volume-mute"></i></button>
+            <input type="range" id="volumeSlider" class="volumen" value="100" max="100" onchange="ajustarVolumen()">
+            <button onclick="retroceder()"><i class="fas fa-backward"></i></button>
+            <button onclick="avanzar()"><i class="fas fa-forward"></i></button>
+            <button onclick="cambiarTiempo(0)"><i class="fas fa-undo"></i></button>
+        </div>
+
+        <div class="enlaces">
+            <a href="video_mp4.mp4" download="video_mp4.mp4">Descargar video</a>
+            |
+            <a href="video_mp4.mp4" target="_blank">Abrir video en nueva página</a>
+        </div>
+
+        <script>
+            const video = document.getElementById("video");
+            const volumeSlider = document.getElementById("volumeSlider");
+
+            // Reproducir o pausar el video
+            function playPause() {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+
+            // Silenciar sonido
+            function volumen() {
+                video.muted = !video.muted;
+                if (video.muted) {
+                    document.querySelector('.fa-volume-up').style.display = 'none';
+                    document.querySelector('.fa-volume-mute').style.display = 'inline';
+                } else {
+                    document.querySelector('.fa-volume-up').style.display = 'inline';
+                    document.querySelector('.fa-volume-mute').style.display = 'none';
+                }
+            }
+
+            // Ajustar volumen
+            function ajustarVolumen() {
+                video.volume = volumeSlider.value / 100;
+                if (video.volume === 0) {
+                    video.muted = true;
+                    document.querySelector('.fa-volume-up').style.display = 'none';
+                    document.querySelector('.fa-volume-mute').style.display = 'inline';
+                } else {
+                    video.muted = false;
+                    document.querySelector('.fa-volume-up').style.display = 'inline';
+                    document.querySelector('.fa-volume-mute').style.display = 'none';
+                }
+            }
+
+            // Retroceder 10 segundos
+            function retroceder() {
+                video.currentTime -= 10;
+            }
+
+            // Avanzar 10 segundos
+            function avanzar() {
+                video.currentTime += 10;
+            }
+
+            // Recargar video
+            function cambiarTiempo(tiempo) {
+                video.currentTime = tiempo;
+            }
+
+            window.onload = function() {
+                if (video.muted) {
+                    document.querySelector('.fa-volume-up').style.display = 'none';
+                    document.querySelector('.fa-volume-mute').style.display = 'inline';
+                } else {
+                    document.querySelector('.fa-volume-up').style.display = 'inline';
+                    document.querySelector('.fa-volume-mute').style.display = 'none';
+                }
+            };
+    </script>
     </body>
 </html>
