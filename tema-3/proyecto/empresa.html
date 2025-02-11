@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Meta etiquetas para el soporte de caracteres y vista en dispositivos móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Filamentopía - Tienda Mayoristas</title>
+    
+    <!-- Vinculación al archivo CSS para los estilos de la página -->
+    <link rel="stylesheet" href="css/styleEmpresa.css">
+</head>
+
+<body>
+    <!-- Sección de encabezado -->
+    <header>
+        <div class="header-container">
+            <!-- Título de la tienda -->
+            <h1>Filamentopía</h1>
+            
+            <!-- Menú de navegación -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Botón para cambiar entre tema claro y oscuro -->
+            <button id="moon" aria-label="Cambiar tema de la página">
+                <div id="moonspot1" class="spots"></div>
+                <div id="moonspot2" class="spots"></div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección de productos -->
+        <section class="productos-container">
+            
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71rlElfkeUL._AC_UF894,1000_QL80_.jpg" alt="Producto 1">
+                <h3>Filamento InovaPlast 1</h3>
+                <p class="price">$15.00 (mayorista)</p>
+                <p>Filamento de alta velocidad - Verde</p>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71ZcMSZyRLL._AC_UF1000,1000_QL80_.jpg" alt="Producto 2">
+                <h3>Filamento InovaPlast 2</h3>
+                <p class="price">$27.50</p>
+                <p>Filamento de alta velocidad - Negro</p>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71PjDnB58bL._AC_UF894,1000_QL80_.jpg" alt="Producto 3">
+                <h3>Filamento InovaPlast 3</h3>
+                <p class="price">$12.00</p>
+                <p>Filamento de alta velocidad - Rojo</p>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71uVglvsUCL._AC_UF1000,1000_QL80_.jpg" alt="Producto 4">
+                <h3>Filamento InovaPlast 4</h3>
+                <p class="price">$45.00</p>
+                <p>Filamento de alta velocidad - Amarillo</p>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71C8meHflML._AC_UF1000,1000_QL80_.jpg" alt="Producto 5">
+                <h3>Filamento InovaPlast 5</h3>
+                <p class="price">$18.00</p>
+                <p>Filamento de alta velocidad - Lila</p>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/712mO91Qq-L.jpg" alt="Producto 6">
+                <h3>Filamento InovaPlast 6</h3>
+                <p class="price">$25.00</p>
+                <p>Filamento de alta velocidad - Rosa fuerte</p>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/711uLgkStdL.jpg" alt="Producto 7">
+                <h3>Filamento InovaPlast 7</h3>
+                <p class="price">$22.50</p>
+                <p>Filamento de alta velocidad - Naranja</p>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71dBjOtr1hL.jpg" alt="Producto 8">
+                <h3>Filamento InovaPlast 8</h3>
+                <p class="price">$30.00</p>
+                <p>Filamento de alta velocidad - Blanco</p>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71NKVpG1VCL.jpg" alt="Producto 9">
+                <h3>Filamento InovaPlast 9</h3>
+                <p class="price">$12.50</p>
+                <p>Filamento de alta velocidad - Azul</p>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71JL-Ll9E1L.jpg" alt="Producto 10">
+                <h3>Filamento InovaPlast 10</h3>
+                <p class="price">$12.50</p>
+                <p>Filamento de alta velocidad - Rosa</p>
+            </div>
+
+        </section>
+
+        <!-- Sección de pedido -->
+        <section id="pedido">
+            <h2>Realiza tu Pedido</h2>
+            <!-- Formulario para realizar el pedido -->
+            <form action="#" method="post">
+                
+                <!-- Campo para ingresar el nombre de la empresa -->
+                <label for="empresa">Nombre de la Empresa:</label>
+                <input type="text" id="empresa" name="empresa" required><br>
+
+                <!-- Campo para ingresar la persona de contacto -->
+                <label for="contacto">Persona de Contacto:</label>
+                <input type="text" id="contacto" name="contacto" required><br>
+
+                <!-- Campo para ingresar el correo electrónico -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <!-- Campo para ingresar el número de teléfono -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required><br>
+
+                <!-- Menú desplegable para seleccionar el producto -->
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto">
+                    <option value="Filamento InovaPlast 1">Filamento InovaPlast 1</option>
+                    <option value="Filamento InovaPlast 2">Filamento InovaPlast 2</option>
+                    <option value="Filamento InovaPlast 3">Filamento InovaPlast 3</option>
+                    <option value="Filamento InovaPlast 4">Filamento InovaPlast 4</option>
+                    <option value="Filamento InovaPlast 5">Filamento InovaPlast 5</option>
+                    <option value="Filamento InovaPlast 6">Filamento InovaPlast 6</option>
+                    <option value="Filamento InovaPlast 7">Filamento InovaPlast 7</option>
+                    <option value="Filamento InovaPlast 8">Filamento InovaPlast 8</option>
+                </select><br>
+
+                <!-- Campo para ingresar la cantidad del producto -->
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required><br>
+
+                <!-- Campo para ingresar comentarios adicionales -->
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios"></textarea><br>
+
+                <!-- Botón para enviar el pedido -->
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
+            <!-- Menú en el pie de página -->
+            <nav aria-label="Menú del pie de página">
+                <ul>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos de servicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Script para cambiar el tema -->
+    <script>
+        // Evento para cambiar entre los temas claro y oscuro
+        document.getElementById('moon').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+
+</html>
