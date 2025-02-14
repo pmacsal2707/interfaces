@@ -177,3 +177,30 @@ footer {
         gap: 10px;
     }
 }
+
+@keyframes colorChange {
+    0% {
+        color: rgb(255, 215, 0); /* Gold */
+    }
+    25% {
+        color: rgb(255, 223, 0); /* GoldenRod */
+    }
+    50% {
+        color: rgb(255, 140, 0); /* DarkOrange */
+    }
+    75% {
+        color: rgb(255, 69, 0); /* OrangeRed */
+    }
+    100% {
+        color: rgb(255, 215, 0); /* Gold */
+    }
+}
+
+.title-animation {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.title-animation:hover {
+    animation: colorChange 2s infinite; /* Aplica la animación de cambio de color */
+}
+

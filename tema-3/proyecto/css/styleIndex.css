@@ -150,7 +150,7 @@ h2 {
 .hero {
     position: relative;
     width: 100%;
-    height: 60vh; /* Reducimos la altura al 60% del viewport */
+    height: 70vh; /* Reducimos la altura al 60% del viewport */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -268,6 +268,32 @@ footer nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
 }
 
+@keyframes colorChange {
+    0% {
+        color: rgb(255, 215, 0); /* Gold */
+    }
+    25% {
+        color: rgb(255, 223, 0); /* GoldenRod */
+    }
+    50% {
+        color: rgb(255, 140, 0); /* DarkOrange */
+    }
+    75% {
+        color: rgb(255, 69, 0); /* OrangeRed */
+    }
+    100% {
+        color: rgb(255, 215, 0); /* Gold */
+    }
+}
+
+.title-animation {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.title-animation:hover {
+    animation: colorChange 2s infinite; /* Aplica la animación de cambio de color */
+}
+
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .header-container {
@@ -284,5 +310,3 @@ footer nav ul li a:hover {
         gap: 10px;
     }
 }
-
-

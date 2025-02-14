@@ -19,7 +19,7 @@
     <header>
         <div class="header-container">
             <!-- Título de la tienda -->
-            <h1>Filamentopía</h1>
+            <h1 class="title-animation">Filamentopía</h1>
             
             <!-- Menú de navegación -->
             <nav>
@@ -31,6 +31,9 @@
                 </ul>
             </nav>
             
+            <!-- Añadir audio para el sonido del gallo -->
+            <audio id="audioGallo" src="multimedia/audio/gallo.wav"></audio>
+            <audio id="audioOwl" src="multimedia/audio/owl.ogg"></audio>
             <!-- Botón para cambiar entre tema claro y oscuro -->
             <button id="moon" aria-label="Cambiar tema de la página">
                 <div id="moonspot1" class="spots"></div>
@@ -194,6 +197,13 @@
         // Evento para cambiar entre los temas claro y oscuro
         document.getElementById('moon').addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
+            // Reproducir el audio
+            var audioGallo = document.getElementById('audioGallo');
+            if (document.body.classList.contains('dark-theme')) {
+                audioOwl.play();
+            } else {
+                audioGallo.play();
+            }
         });
     </script>
 </body>
