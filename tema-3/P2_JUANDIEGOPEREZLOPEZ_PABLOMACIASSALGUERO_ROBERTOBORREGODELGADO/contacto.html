@@ -16,6 +16,11 @@
     
     <!-- Enlace al archivo CSS para tema claro -->
     <link id="themeLink" rel="stylesheet" href="css/theme-light.css">
+    
+    <!-- Fuentes de Google Fonts para el texto de la página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +42,7 @@
         
         <!-- Añadir audio para el sonido del gallo -->
         <audio id="audioGallo" src="multimedia/audio/gallo.wav"></audio>
-        <audio id="audioBird" src="multimedia/audio/pajaros.mp3"></audio>
+        <audio id="audioBuho" src="multimedia/audio/owl.ogg"></audio>
         <!-- Contenedor para el botón que cambia el tema de la página -->
         <div id="main">
             <button id="moon" aria-label="Cambiar tema de la página">
@@ -99,7 +104,7 @@
             <!-- Sección para mostrar un mapa de la ubicación -->
             <div class="mapa-ubicacion text-center">
                 <!-- Incrustamos un mapa de Google -->
-                <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_LINK_HERE" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d798.0804173708689!2d-5.651777844436733!3d36.858718620958896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zQ2FsbGUgQmxhcyBJbmZhbnRlLCBCbG9xdWUgNCwgUG9ydGFsIDMsIDLCuiBCLyBWaWxsYW1hcnTDrW4gLSAxMTY1MC8gQ8OhZGl6LyBBbmRhbHVjw61hLyBFc3Bhw7Fh!5e0!3m2!1ses!2ses!4v1729847591747!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -121,34 +126,27 @@
 
     <!-- Script para cambiar el tema (claro/oscuro) -->
     <script>
-        // Cambio de tema con JavaScript
-        document.getElementById('moon').addEventListener('click', () => {
-            // Alterna entre los temas claro y oscuro
-            document.body.classList.toggle('dark-theme');
-            // Reproducir el audio
-            var audioGallo = document.getElementById('audioGallo');
-            if (document.body.classList.contains('dark-theme')) {
-                audioBird.play();
-            } else {
-                audioGallo.play();
+        // Verificar si hay un modo guardado en localStorage
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("theme") === "dark") {
+                document.body.classList.add("dark-theme");
             }
-
         });
-
-        // Seleccionamos el botón de enviar y el elemento de audio
-        document.getElementById('botonEnviar').addEventListener('click', function(event) {
-            // Prevenir que el formulario se envíe para mostrar el sonido (si lo deseas)
-            event.preventDefault();
         
-            // Reproducir el audio
-            var audio = document.getElementById('audio');
-            audio.play();
+        // Evento que cambia el tema al hacer clic en el botón del "moon"
+        document.getElementById('moon').addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
         
-            // Aquí puedes agregar cualquier lógica adicional que necesites para enviar el formulario
+            // Guardar en localStorage el estado actual del tema
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem("theme", "dark");
+                document.getElementById('audioBuho').play();
+            } else {
+                localStorage.setItem("theme", "light");
+                document.getElementById('audioGallo').play();
+            }
         });
-
-
-      </script>
+        </script>
 </body>
 
 </html>

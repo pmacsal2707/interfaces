@@ -13,6 +13,11 @@
     <!-- Vinculación al archivo de estilos CSS para la página -->
     <link rel="stylesheet" href="css/styleIndex.css">
 
+    <!-- Fuentes de Google Fonts para el texto de la página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <!-- Favicon que aparece en la pestaña del navegador -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -36,10 +41,9 @@
                 </ul>
             </nav>
 
-
                 <!-- Añadir audio para el sonido del gallo -->
                 <audio id="audioGallo" src="multimedia/audio/gallo.wav"></audio>
-                <audio id="audioBird" src="multimedia/audio/pajaro  s.mp3"></audio>
+                <audio id="audioBuho" src="multimedia/audio/owl.ogg"></audio>
                 <!-- Botón para cambiar el tema de la página entre claro y oscuro -->
                 <div id="theme-switcher">
                     <button id="moon"
@@ -64,7 +68,7 @@
                     <i id="control-icon" class="fas fa-play"></i>
                 </button>
                 <div class="hero-content">
-                    <p>Descubre los mejores filamentos para tus impresoras 3D
+                    <p class='subtitulo'>Descubre los mejores filamentos para tus impresoras 3D
                         con Filamentopía</p>
                 </div>
             </section>
@@ -73,7 +77,7 @@
             <section id="about-us">
                 <h2>¿Quiénes somos?</h2>
                 <div class="about-content">
-                    <p>En Filamentopía, nuestra pasión por la impresión 3D nos
+                    <p class="p1">En Filamentopía, nuestra pasión por la impresión 3D nos
                         motiva a ofrecer productos y servicios que marcan la
                         diferencia. Entendemos que cada proyecto tiene sus
                         propias necesidades, ya sea un diseño creativo, un
@@ -86,14 +90,14 @@
                     <img
                         src="multimedia/image/empresa_humana.webp"
                         alt="Nuestro equipo"
-                        style="max-width: 50%; border-radius: 8px;">
+                        style="max-width: 30%; border-radius: 8px; float: right; margin-left: 20px;">
                 </div>
             </section>
 
             <!-- Sección sobre las razones para elegir Filamentopía como proveedor -->
             <section id="about-us2">
-                <h2>¿Por qué elegir Filamentopía?</h2>
-                <p>Nuestro equipo de expertos está listo para asesorarte, desde
+                <h2 class="h21" style="text-align: center;">¿Por qué elegir Filamentopía?</h2>
+                <p class="p2" style="text-align: center;">Nuestro equipo de expertos está listo para asesorarte, desde
                     la elección del filamento ideal hasta consejos prácticos
                     para tus proyectos.
                     Variedad para todos, contamos con una amplia selección de
@@ -125,6 +129,8 @@
                 </div>
 
                 <div class="video-container">
+                    <h3 class="video-title">Demostración de Impresora 3D</h3>
+                    <p class="video-description">Mira cómo nuestras impresoras 3D crean objetos increíbles con precisión y detalle.</p>
                     <video controls>
                         <source src="multimedia/video/impresora.mp4" type="video/mp4">
                         Tu navegador no soporta la etiqueta de video.
@@ -137,32 +143,41 @@
         <!-- Footer (Pie de página) -->
         <footer>
             <div class="container footer-container">
-                <p>&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
+                <p class="p5">&copy; 2024 Filamentopía. Todos los derechos reservados.</p>
                 <nav aria-label="Menú del pie de página">
                     <ul>
-                        <li><a href="#">Política de privacidad</a></li>
-                        <li><a href="#">Términos de servicio</a></li>
+                        <li class="p5"><a href="#">Política de privacidad</a></li>
+                        <li class="p5"><a href="#">Términos de servicio</a></li>
                     </ul>
                 </nav>
-                <p>Este sitio web está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
-                <p>Imágenes y recursos cortesía de <a href="https://www.pexels.com/" target="_blank">Pexels</a> y <a href="https://www.pixabay.com/" target="_blank">Pixabay</a></p>
+                <p class="p5">Este sitio web está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+                <p class="p5">Imágenes y recursos cortesía de <a href="https://www.pexels.com/" target="_blank">Pexels</a> y <a href="https://www.pixabay.com/" target="_blank">Pixabay</a></p>
             </div>
         </footer>
 
         <!-- Script para cambiar entre el tema claro y oscuro -->
         <script>
-      // Evento que cambia el tema al hacer clic en el botón del "moon"
-      document.getElementById('moon').addEventListener('click', () => {
-        // Se alterna la clase 'dark-theme' en el body para activar o desactivar el tema oscuro
-        document.body.classList.toggle('dark-theme');
-        // Reproducir el audio
-        var audioGallo = document.getElementById('audioGallo');
-            if (document.body.classList.contains('dark-theme')) {
-                audioBird.play();
-            } else {
-                audioGallo.play();
-            }
-      });
+            // Verificar si hay un modo guardado en localStorage
+            document.addEventListener("DOMContentLoaded", function () {
+                if (localStorage.getItem("theme") === "dark") {
+                    document.body.classList.add("dark-theme");
+                }
+            });
+            
+            // Evento que cambia el tema al hacer clic en el botón del "moon"
+            document.getElementById('moon').addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+            
+                // Guardar en localStorage el estado actual del tema
+                if (document.body.classList.contains('dark-theme')) {
+                    localStorage.setItem("theme", "dark");
+                    document.getElementById('audioBuho').play();
+                } else {
+                    localStorage.setItem("theme", "light");
+                    document.getElementById('audioGallo').play();
+                }
+            });
+            
 
     const video = document.getElementById("hero-video");
     const videoControl = document.getElementById("video-control");

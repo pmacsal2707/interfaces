@@ -1,3 +1,6 @@
+/* Importar la fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Estilos generales */
 * {
     margin: 0; /* Elimina el margen por defecto de los elementos */
@@ -7,7 +10,7 @@
 
 html, body {
     height: 100%; /* Establece que tanto el html como el body ocupen toda la altura de la ventana */
-    font-family: "Arial", sans-serif; /* Define la fuente principal */
+    font-family: 'Poppins', sans-serif; /* Define la fuente principal */
     line-height: 1.6; /* Establece la altura de línea para facilitar la lectura */
     background-color: #f7f7f7; /* Color de fondo del body */
     color: #333; /* Color de texto por defecto */
@@ -109,6 +112,29 @@ nav ul li a:hover {
     text-align: center; /* Centra el contenido dentro del producto */
     padding: 20px; /* Añade espacio dentro de cada producto */
     color: white; /* Color de texto blanco */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para transformaciones y sombras */
+    position: relative; /* Posiciona el producto relativo a su contenedor */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.producto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+}
+
+.producto:hover::before {
+    left: 100%;
+}
+
+.producto:hover {
+    transform: translateY(-10px); /* Desplaza el producto hacia arriba al pasar el ratón */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Añade sombra al hacer hover */
 }
 
 /* Estilo para las imágenes de los productos */
@@ -116,6 +142,7 @@ nav ul li a:hover {
     width: 100%; /* Hace que las imágenes llenen el contenedor */
     height: auto; /* Mantiene las proporciones de la imagen */
     border-radius: 8px; /* Bordes redondeados para las imágenes */
+    /* Eliminamos la transición y la transformación */
 }
 
 /* Estilo para el área de pedido */
@@ -144,13 +171,12 @@ nav ul li a:hover {
     background-color: #f4c542; /* Color de fondo amarillo para el botón */
     color: #333; /* Color de texto oscuro */
     cursor: pointer; /* Cambia el cursor a mano cuando el ratón pasa por encima */
-    transition: 0.03s; /* Añadimos ina transicion */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añadimos una transición */
 }
 
 #pedido form button:hover {
-    background-color: #3a3a3a; /* Color de fondo ocuro para el botón */
-    color: #f4c542; /* Color de texto amarillo */
-    cursor: pointer; /* Cambia el cursor a mano cuando el ratón pasa por encima */
+    background-color: #f4c5426c; /* Color de fondo oscuro para el botón */
+    color: #333; /* Color de texto amarillo */
 }
 
 /* Estilo para el pie de página */
