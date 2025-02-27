@@ -218,6 +218,8 @@ footer a:hover {
     color: #f4c542; /* Cambia el color a amarillo cuando se pasa el ratón */
 }
 
+
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     header {
