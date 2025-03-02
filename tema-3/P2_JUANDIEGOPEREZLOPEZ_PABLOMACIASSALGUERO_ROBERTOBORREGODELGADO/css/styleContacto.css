@@ -1,3 +1,6 @@
+/* Importar la fuente Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Estilos generales */
 * {
     margin: 0; /* Elimina los márgenes predeterminados de todos los elementos */
@@ -7,7 +10,7 @@
 
 html, body {
     height: 100%; /* Asegura que el html y el body ocupen toda la altura disponible */
-    font-family: "Arial", sans-serif; /* Define la fuente principal */
+    font-family: 'Poppins', sans-serif;  /* Define la fuente principal */
     line-height: 1.6; /* Establece la altura de línea para mayor legibilidad */
     background-color: #f7f7f7; /* Color de fondo claro para el cuerpo */
     color: #333; /* Color de texto oscuro por defecto */
