@@ -20,25 +20,31 @@
   <!-- Encabezado -->
   <header>
     <div class="header-container">
-      <h1 class="title-animation">Filamentopia</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-          <li><a href="empresa.html">Empresa</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <!-- Añadir audio para el sonido del gallo -->
-      <audio id="audioGallo" src="multimedia/audio/gallo.wav"></audio>
-      <audio id="audioBuho" src="multimedia/audio/owl.ogg"></audio>
-      <!-- Botón para cambiar entre tema claro y oscuro -->
-      <button id="moon" aria-label="Cambiar tema de la página">
-          <div id="moonspot1" class="spots"></div>
-          <div id="moonspot2" class="spots"></div>
-      </button>
+        <h1 class="title-animation">Filamentopia</h1>
+        <nav aria-label="Menú principal">
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li class="dropdown">
+                    <a href="productos.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-store"></i> Tienda</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                        <li><a class="dropdown-item" href="ofertas.html">Ofertas</a></li>
+                    </ul>
+                </li>
+                <li><a href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Añadir audio para el sonido del gallo -->
+        <audio id="audioGallo" src="multimedia/audio/gallo.wav"></audio>
+        <audio id="audioBuho" src="multimedia/audio/owl.ogg"></audio>
+        <!-- Botón para cambiar entre tema claro y oscuro -->
+        <button id="moon" aria-label="Cambiar tema de la página">
+            <div id="moonspot1" class="spots"></div>
+            <div id="moonspot2" class="spots"></div>
+        </button>
     </div>
-  </header>
+</header>
 
   <!-- Contenido principal -->
   <main>

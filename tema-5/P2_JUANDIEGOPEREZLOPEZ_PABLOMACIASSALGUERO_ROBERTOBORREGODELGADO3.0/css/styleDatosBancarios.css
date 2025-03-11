@@ -52,6 +52,61 @@ body {
   #pago button:hover {
     background-color: #e68900;
   }
+  /* Estilos para la barra de navegación */
+nav ul {
+  list-style: none;  /* Elimina los puntos de la lista */
+  display: flex;  /* Usa flexbox para organizar los elementos horizontalmente */
+  padding: 0;  /* Elimina el padding por defecto */
+  margin: 0;  /* Elimina el margen por defecto */
+}
+
+nav ul li {
+  position: relative; /* Required for dropdown positioning */
+  margin: 0 15px;  /* Añade margen entre los elementos de la lista */
+}
+
+nav ul li a {
+  text-decoration: none;  /* Elimina el subrayado de los enlaces */
+  color: white;  /* Color blanco para los enlaces */
+  font-size: 1.2rem;  /* Tamaño de fuente para los enlaces */
+  transition: color 0.3s;  /* Transición suave para el cambio de color */
+  display: flex;  /* Flexbox for icon alignment */
+  align-items: center;  /* Center icon and text vertically */
+}
+
+nav ul li a i {
+  margin-right: 8px;  /* Space between icon and text */
+}
+
+nav ul li .dropdown-menu {
+  display: none;  /* Hide dropdown by default */
+  position: absolute;  /* Position relative to parent */
+  top: 100%;  /* Position below parent */
+  left: 0;  /* Align to left */
+  background-color: #3a3a3a;  /* Same background as nav */
+  padding: 10px 0;  /* Padding for dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow for dropdown */
+  z-index: 1000;  /* Ensure dropdown is above other elements */
+}
+
+nav ul li .dropdown-menu a {
+  color: white;  /* White text for dropdown items */
+  padding: 10px 20px;  /* Padding for dropdown items */
+  display: block;  /* Block display for full clickable area */
+}
+
+nav ul li .dropdown-menu a:hover {
+  background-color: #f4c542;  /* Highlight on hover */
+  color: #333;  /* Dark text on hover */
+}
+
+nav ul li:hover .dropdown-menu {
+  display: block;  /* Show dropdown on hover */
+}
+
+nav ul li a:hover {
+  color: #f4c542;  /* Cambia el color a amarillo dorado cuando se pasa el cursor */
+}
   
   /* Botón lunar dentro del encabezado para el cambio de tema */
 #moon {

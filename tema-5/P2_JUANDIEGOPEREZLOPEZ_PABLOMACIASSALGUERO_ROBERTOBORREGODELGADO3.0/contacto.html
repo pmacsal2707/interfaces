@@ -9,6 +9,7 @@
     <link id="themeLink" rel="stylesheet" href="css/theme-light.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -19,12 +20,18 @@
             <h1 class="title-animation">Filamentopía</h1>
             
             <!-- Menú de navegación -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tienda.html">Tienda</a></li>
-                    <li><a href="empresa.html">Empresa</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+            <nav aria-label="Menú principal">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="productos.html" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-store"></i> Tienda</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                            <li><a class="dropdown-item" href="ofertas.html">Ofertas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                    <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
                 </ul>
             </nav>
             
