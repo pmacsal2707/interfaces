@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Este es un párrafo de ejemplo con un texto cualquiera.</p>
+    <div id="detalles">
+        <p>Estos son los detalles adicionales que se mostrarán/ocultarán.</p>
+    </div>
+    <button id="toggleButton">Mostrar más</button>
+
+    <script>
+        const detalles = document.getElementById('detalles');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', () => {
+            if (detalles.style.display === 'none') {
+                detalles.style.display = 'block';
+                toggleButton.textContent = 'Mostrar menos';
+            } else {
+                detalles.style.display = 'none';
+                toggleButton.textContent = 'Mostrar más';
+            }
+        });
+
+        // Inicialmente ocultar los detalles
+        detalles.style.display = 'none';
+    </script>
+</body>
+</html>
